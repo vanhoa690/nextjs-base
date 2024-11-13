@@ -2,7 +2,7 @@
   "products": [
     {
       "id": 1,
-      "name": "Laptop",
+      "name": "Smartphone",
       "price": 800
     },
     {
@@ -12,8 +12,8 @@
     },
     {
       "id": 3,
-      "name": "Tablet",
-      "price": 600
+      "name": "Smartphone",
+      "price": 800
     }
   ]
 }
