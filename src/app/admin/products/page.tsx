@@ -1,6 +1,7 @@
 import ButtonDelete from "@/components/ButtonDelete";
 import axios from "axios";
 import Link from "next/link";
+import prisma from "@/lib/prisma";
 
 export type Product = {
   id: number;
@@ -8,8 +9,12 @@ export type Product = {
   price: number;
 };
 export default async function Admin() {
-  const { data: products } = await axios.get("http://localhost:3001/products");
-  console.log(products);
+  // const { data: products } = await axios.get("http://localhost:3001/products");
+  const products: Product[] = await prisma.product.findMany();
+  // console.log(data);
+
+  // const products: Product[] = [];
+  // console.log(products);
 
   return (
     <div className="container">
